@@ -1,0 +1,162 @@
+// ========== BASE STYLES ========== //
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+	box-sizing: border-box;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.btn {
+	@include button;
+	transition: $transition;
+}
+
+.btn:hover {
+	filter: saturate(2);
+	cursor: pointer;
+}
+
+img {
+	vertical-align: middle;
+	border-style: none;
+	max-width: 100%;
+	height: auto;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100vh;
+}
+
+body {
+	background-color: $black;
+	color: $white;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 21px;
+}
+
+.container {
+	width: 100%;
+	max-width: 1100px;
+	height: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
+
+.global-modalWindow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100% !important;
+	height: 90vh !important;
+	margin: 20px 0 100px 0;
+	padding: 30px;
+	background-color: $black;
+	border: 1px solid $info;
+	border-radius: 5px;
+	z-index: 1000;
+	transition: $transition;
+	transform: translateY(-120%);
+
+	.close-window {
+		height: 50px;
+		cursor: pointer;
+		transition: $transition;
+	}
+
+	.close-window__icon {
+		border-radius: 50%;
+		border: 1px solid transparent;
+		transition: $transition;
+	}
+
+	.close-window:hover .close-window__icon {
+		color: $info;
+		width: 50px;
+		height: 50px;
+		border: 1px solid $info;
+	}
+
+	h2 {
+		margin-top: 50px;
+		margin-bottom: 30px;
+		font-size: 2.5rem;
+		font-weight: 100;
+		text-align: center;
+	}
+
+	#project-data {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		input {
+			width: 48%;
+			margin: 10px;
+			padding: 10px;
+			border-radius: 3px;
+			background-color: $gray;
+			color: $white;
+		}
+	}
+
+	#preview-data {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		input {
+			width: 48%;
+			margin: 10px;
+			padding: 10px;
+			border-radius: 3px;
+			background-color: $gray;
+			color: $white;
+		}
+	}
+
+	#image-data {
+		display: flex;
+		justify-content: space-between !important;
+
+		input {
+			margin: 10px;
+			padding: 10px;
+			border-radius: 3px;
+			background-color: $gray;
+			color: $white;
+			cursor: pointer;
+		}
+	}
+
+	.btn-global-windowData__save {
+		margin-top: 30px;
+		padding: 20px;
+		width: 100%;
+	}
+}
+
+.modalWindowShow {
+	transform: translateX(0) !important;
+	opacity: 1 !important;
+}
+
+.globalModalWindowShow {
+	transform: translateY(0) !important;
+}

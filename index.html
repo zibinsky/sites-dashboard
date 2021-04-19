@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Sites Dashboard</title>
+
+   <!-- FONTS -->
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+         rel="stylesheet">
+
+   <!-- STYLES -->
+   <link rel="stylesheet" href="css/normalize.css">
+   <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+   <div class="container">
+
+      <!-- Global Modal Window -->
+      <div class="global-modalWindow">
+         <div class="close-window">
+            <svg class="close-window__icon" xmlns="http://www.w3.org/2000/svg"
+                 width="26" height="26" fill="currentColor"
+                 class="bi bi-arrow-left" viewBox="0 0 16 16">
+               <path fill-rule="evenodd"
+                     d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+            </svg>
+         </div>
+         <h2>Данные проекта</h2>
+         <form id="project-data">
+            <input type="text" id="input-project__name"
+                   placeholder="Название проекта">
+            <input type="text" id="input-project__lines"
+                   placeholder="Количество строк">
+            <input type="text" id="input-project__hours"
+                   placeholder="Количество часов">
+            <input type="text" id="input-project__money"
+                   placeholder="Стоимость проекта">
+         </form>
+
+         <h2>Превью проекта</h2>
+         <form id="preview-data">
+            <input type="text" id="input-preview__name"
+                   placeholder="Название проекта">
+            <input type="text" id="input-preview__descr"
+                   placeholder="Описание проекта">
+            <input type="text" id="input-preview__time"
+                   placeholder="Время выполнения, детали">
+         </form>
+
+         <h2>Изображение проекта</h2>
+         <form id="image-data">
+            <input type="file" id="input-image__file"
+                   input="download(this)">
+            <!-- <label for="file-input">Выберите файл</label> -->
+         </form>
+         <button class="btn btn-global-windowData__save">СОХРАНИТЬ</button>
+      </div>
+      <!-- End Global Modal Window -->
+
+      <!-- HEADER -->
+      <header class="header">
+         <div class="header-modalWindow">
+            <form class="header-inputForm">
+               <input id="header-modal-login" type="text" placeholder="Login">
+               <input id="header-modal-password" type="text"
+                      placeholder="Password">
+            </form>
+         </div>
+         <div class="header-logo">Web Dev Dashboard</div>
+         <div class="header-button">
+            <button type="submit" class="btn btn-enter">Авторизация</button>
+         </div>
+      </header>
+
+      <!-- CONTENT -->
+      <section class="content">
+         <div class="content-table">
+            <!-- CARD -->
+            <div class="content-table__card">
+               <div class="card--header">Проекты</div>
+               <div class="card--content">
+                  <div class="card--content__number" id="card-projects">0</div>
+                  <div class="card--content__descr">Общее количество проектов
+                  </div>
+               </div>
+            </div>
+            <!-- CARD -->
+            <div class="content-table__card">
+               <div class="card--header">Строки</div>
+               <div class="card--content">
+                  <div class="card--content__number" id="card-lines">0</div>
+                  <div class="card--content__descr">Общее количество строк</div>
+               </div>
+            </div>
+            <!-- CARD -->
+            <div class="content-table__card">
+               <div class="card--header">Время</div>
+               <div class="card--content">
+                  <div class="card--content__number" id="card-hours">0</div>
+                  <div class="card--content__descr">Общее количество часов</div>
+               </div>
+            </div>
+            <!-- CARD -->
+            <div class="content-table__card">
+               <div class="card--header">Стоимость</div>
+               <div class="card--content">
+                  <div class="card--content__number" id="card-money">0</div>
+                  <div class="card--content__descr">Общий заработок (руб.)</div>
+               </div>
+            </div>
+         </div>
+         <div class="content-preview">
+            <div class="content-preview__header">WWW.GLAMOURIYA.RU</div>
+            <div class="content-preview__image">
+               <img class="content-preview__image--inner"
+                    src="./images/project-1.jpg" alt="photo">
+            </div>
+            <div class="content-preview__descr">Проект сайта итальянской мягкой
+               мебели для компании "Glamouriya"</div>
+            <div class="content-preview__info">Время выполнения: 7 дней</div>
+         </div>
+      </section>
+
+      <!-- LIST-PROJECTS -->
+      <section class="list-projects">
+         <div class="list-projects__header">
+            <div class="list-projects__header--title">Таблица проектов</div>
+            <div class="list-projects__button btn">Новая запись</div>
+         </div>
+         <div class="list-projects__title">
+            <div class="list-projects__title--item">Название проекта</div>
+            <div class="list-projects__title--item">Количество строк</div>
+            <div class="list-projects__title--item">Затраченное время</div>
+            <div class="list-projects__title--item">Стоимость проекта</div>
+            <div class="list-projects__title--item">Дополнительно</div>
+         </div>
+         <ul class="list-projects__content">
+  
+         </ul>
+      </section>
+
+   </div>
+
+   <script src="js/app.js"></script>
+</body>
+
+</html>
+
+
+
+
+          <!-- <li class="list-projects__item">
+               <div class="list-projects__item--col" id="project-name">www.glamouriya.com</div>
+               <div class="list-projects__item--col" id="project-lines">1200</div>
+               <div class="list-projects__item--col" id="project-times">57</div>
+               <div class="list-projects__item--col" id="project-cost">12 000</div>
+               <div class="list-projects__item--col" id="project-extra">
+                  <div class="list-projects__item--col" id="project-edit">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                          fill="currentColor" class="bi bi-pen"
+                          viewBox="0 0 16 16">
+                        <path
+                              d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z" />
+                     </svg>
+                  </div>
+                  <div class="list-projects__item--col" id="project-delete">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                          fill="currentColor" class="bi bi-x-circle"
+                          viewBox="0 0 16 16">
+                        <path
+                              d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                        <path
+                              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                     </svg>
+                  </div>
+               </div>
+            </li> -->

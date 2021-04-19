@@ -1,0 +1,67 @@
+// ========== PROJECTS ========== //
+.list-projects__header {
+	height: 70px;
+	padding: 20px 0;
+   margin-bottom: 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.list-projects__header--title {
+	font-size: 2rem;
+	color: $gray-light;
+}
+
+.list-projects__title {
+   width: 100%;
+	padding: 15px 0;
+   margin-bottom: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-top: 1px solid rgba(28, 28, 28, 0.9);
+	border-bottom: 2px solid $gray;
+}
+
+.list-projects__title--item {
+   width: 25% !important;
+}
+
+.list-projects__item {
+   width: 100% !important;
+   padding: 15px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 2px solid $gray;
+}
+
+.list-projects__item--col {
+   width: 25% !important;
+}
+
+#project-extra {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+}
+
+#project-edit {
+   transition: $transition;
+   margin-right: 30px;
+   cursor: pointer;
+}
+
+#project-edit:hover {
+   color: $info;
+}
+
+#project-delete {
+   transition: $transition;
+   cursor: pointer;
+}
+
+#project-delete:hover {
+   color: $info;
+}

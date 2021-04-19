@@ -1,0 +1,37 @@
+// ========== HEADER ========== //
+.header {
+	width: 100%;
+	padding: 30px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #ccc;
+	position: relative;
+	transition: $transition;
+
+	&-logo {
+		font-size: 24px;
+		color: $white;
+	}
+
+	&-modalWindow {
+		position: absolute;
+		top: 40%;
+		left: 0;
+		background-color: #fff;
+		transition: $transition;
+		transform: translateY(-40%);
+		transform: translateX(-100%);
+		// opacity: 0;
+
+		form {
+			background-color: $black;
+		}
+
+		input {
+			@include inputField;
+			width: 300px;
+			padding: 7px 15px;
+		}
+	}
+}
