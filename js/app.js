@@ -146,9 +146,13 @@ const saveNewProject = (e) => {
          sumTime += itemHours;
          sumMoney += itemMoney;
 
-         cardLines.innerHTML += sumLine;
-         cardHours.innerHTML += sumTime;
-         cardMoney.innerHTML += sumMoney;
+         let totalLines = parseInt(cardLines.textContent);
+         let totalHours = parseInt(cardHours.textContent);
+         let totalMoney = parseInt(cardMoney.textContent);
+
+         cardLines.innerHTML = (totalLines + sumLine).toString();
+         cardHours.innerHTML = (totalHours + sumTime).toString();
+         cardMoney.innerHTML = (totalMoney + sumMoney).toString();
 
       });
    }
