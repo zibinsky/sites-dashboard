@@ -216,12 +216,3 @@ btnEnter.addEventListener('click', showModalWindow);
 btnNewProject.addEventListener('click', addNewProject);
 closeWindowIcon.addEventListener('click', closeGlobalModalWindow);
 btnSaveNewProject.addEventListener('click', saveNewProject);
-
-
-
-// Функция отображения созданных тасков
-
-// const updateCount = () => {
-//    let count = document.querySelectorAll('.content-item').length;
-//    numberOfTasks.innerHTML = count;
-// }
