@@ -132,15 +132,14 @@ const saveNewProject = (e) => {
       newArray.push(newTableLine);
 
       newArray.forEach(item => {
-
          let itemLines = item.querySelector('#project-lines').textContent;
-         itemLines = parseInt(itemLines);
+         itemLines = parseInt(itemLines) || 0;
 
          let itemHours = item.querySelector('#project-times').textContent;
-         itemHours = parseInt(itemHours);
+         itemHours = parseInt(itemHours) || 0;
 
          let itemMoney = item.querySelector('#project-cost').textContent;
-         itemMoney = parseInt(itemMoney);
+         itemMoney = parseInt(itemMoney) || 0;
 
          sumLine += itemLines;
          sumTime += itemHours;
@@ -154,8 +153,26 @@ const saveNewProject = (e) => {
          cardHours.innerHTML = (totalHours + sumTime).toString();
          cardMoney.innerHTML = (totalMoney + sumMoney).toString();
 
+         // Функция отображения созданных тасков
+         const updateCount = () => {
+            let count = document.querySelectorAll('.list-projects__item').length;
+            cardProjects.innerHTML = count;
+         }
+
+         updateCount();
+
       });
    }
+
+   // Функция удаления таска
+   const deletetask = () => {
+      let delTask = document.querySelector('#project-delete');
+      delTask.addEventListener('click', () => {
+         delTask.closest('.list-projects__item').remove();
+      })
+   }
+
+   deletetask();
 
    contentDataSave();
 
@@ -202,3 +219,9 @@ btnSaveNewProject.addEventListener('click', saveNewProject);
 
 
 
+// Функция отображения созданных тасков
+
+// const updateCount = () => {
+//    let count = document.querySelectorAll('.content-item').length;
+//    numberOfTasks.innerHTML = count;
+// }
